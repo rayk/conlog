@@ -1,0 +1,11 @@
+analyzer:
+  exclude:
+    -test/**
+  strong-mode: true
+
+linter:
+  rules:
+    - camel_case_types
+    - empty_constructor_bodies
+    - avoid_empty_else
+    - hash_and_equals
