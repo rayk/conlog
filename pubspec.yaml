@@ -2,7 +2,7 @@ name: conlog
 description: Console Logging Library for those who hate unstructured logging and configuration.
 version: 0.0.1
 author: Ray King & Ji Young Lee
-#homepage: https://www.example.com
+homepage: https://github.com/rayk/conlog
 
 environment:
   sdk: '>=1.0.0 <2.0.0'
