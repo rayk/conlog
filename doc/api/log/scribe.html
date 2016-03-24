@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="API docs for the scribe function from the log library, for the Dart programming language.">
+  <title>scribe function - log library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="..">
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' type='text/css'>
+  <link rel="stylesheet" href="static-assets/prettify.css">
+  <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+
+  <!-- Do not remove placeholder -->
+  <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+  <nav class="navbar navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+          <ol class="breadcrumbs gt-separated hidden-xs">
+            <li><a href="index.html">conlog</a></li>
+            <li><a href="log/log-library.html">log</a></li>
+            <li class="self-crumb">scribe</li>
+          </ol>
+          <div class="self-name">scribe</div>
+          <form class="search navbar-right" role="search">
+            <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+          </form>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+  </nav>
+
+  <div class="container masthead">
+    <div class="row">
+      <div class="col-sm-12 contents">
+        <ol class="breadcrumbs gt-separated visible-xs">
+          <li><a href="index.html">conlog</a></li>
+          <li><a href="log/log-library.html">log</a></li>
+          <li class="self-crumb">scribe</li>
+        </ol>
+        <div class="title-description">
+          <h1 class="title">
+            <span class="kind">function</span> scribe
+          </h1>
+        </div>
+        <ul class="subnav">
+          <li><a href="log/scribe.html#source">Source</a></li>
+        </ul>
+      </div> <!-- /col -->
+    </div> <!-- /row -->
+  </div> <!-- /container -->
+
+</header>
+
+<div class="container body">
+  <div class="row">
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">conlog</a></h5>
+    <h5><a href="log/log-library.html">log</a></h5>
+    <ol>
+    
+    
+    
+      <li class="section-title"><a href="log/log-library.html#functions">Functions</a></li>
+      <li><a href="log/scribe.html">scribe</a></li>
+    
+      <li class="section-title"><a href="log/log-library.html#enums">Enums</a></li>
+      <li><a href="log/Act-class.html">Act</a></li>
+      <li><a href="log/DirectObject-class.html">DirectObject</a></li>
+      <li><a href="log/Subject-class.html">Subject</a></li>
+    
+      <li class="section-title"><a href="log/log-library.html#classes">Classes</a></li>
+      <li><a href="log/LogIt-class.html">LogIt</a></li>
+    
+    </ol>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+
+    <section class="multi-line-signature">
+        <span class="returntype"><a href="log/LogIt-class.html">LogIt</a></span>
+        <span class="name ">scribe</span>(<wbr><span class="parameter" id="scribe-param-subject"><span class="type-annotation"><a href="log/Subject-class.html">Subject</a></span> <span class="parameter-name">subject</span></span>, {<span class="parameter" id="scribe-param-nameLabel"><span class="type-annotation">String</span> <span class="parameter-name">nameLabel</span></span>, <span class="parameter" id="scribe-param-identifier"><span class="type-annotation">String</span> <span class="parameter-name">identifier</span></span>})
+    </section>
+    <section class="desc markdown">
+      <p>Returns a LogIt which is the only thing that is needed to create logging message.</p>
+<p>You provide the scribe function as must information as you can about the context
+being the subject, which is enumerated. Within an interaction of block of code you
+may notice many subjects. But that is the big one, what is the reason all these
+little classes (subjects) are interacting.</p>
+<p>Optionally you can give subject a non case sensitive non-unique name and or
+unique identifier. In essence you are telling the scribe about the subject
+which they are scribing about.</p>
+<p>The LogIt returned by the scribe now knows about this character (Subject) in
+you application. Ask scribe again about the same entity will result in the same
+LogIt being returned to you.</p>
+<p>Scribes knows only about the LogIt within it own memory space. It maintains
+that knowledge for the life of the memory space.</p>
+    </section>
+    
+    <section class="summary source-code" id="source">
+      <h2><span>Source</span> </h2>
+      <pre><code class="prettyprint lang-dart">LogIt scribe(Subject subject, {String nameLabel, String identifier}) {
+  // isLogProcessorOnline. -&gt; Tune Log Processing Service
+  // isLogIt Existing. -&gt; retrieve or create
+  //
+  // Create LogIt, get entity details, isolate details, channel ro processor
+  // Make LogIt and Return.
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+</div> <!-- row -->
+</div> <!-- container -->
+
+<footer>
+  <div class="container-fluid">
+    <div class="container">
+      <p class="text-center">
+        <span class="no-break">
+          conlog 0.0.1
+        </span>
+        &bull;
+        <span class="no-break">
+          <a href="https://www.dartlang.org">
+            <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
+          </a>
+        </span>
+        &bull;
+        <span class="copyright no-break">
+          <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+        </span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+
+</body>
+
+</html>

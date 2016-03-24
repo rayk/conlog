@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="API docs for the Act enum from the log library, for the Dart programming language.">
+  <title>Act enum - log library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="..">
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' type='text/css'>
+  <link rel="stylesheet" href="static-assets/prettify.css">
+  <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+
+  <!-- Do not remove placeholder -->
+  <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+  <nav class="navbar navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+          <ol class="breadcrumbs gt-separated hidden-xs">
+            <li><a href="index.html">conlog</a></li>
+            <li><a href="log/log-library.html">log</a></li>
+            <li class="self-crumb">Act</li>
+          </ol>
+          <div class="self-name">Act</div>
+          <form class="search navbar-right" role="search">
+            <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+          </form>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+  </nav>
+
+  <div class="container masthead">
+    <div class="row">
+      <div class="col-sm-12 contents">
+        <ol class="breadcrumbs gt-separated visible-xs">
+          <li><a href="index.html">conlog</a></li>
+          <li><a href="log/log-library.html">log</a></li>
+          <li class="self-crumb">Act</li>
+        </ol>
+        <div class="title-description">
+          <h1 class="title">
+            <span class="kind">enum</span> Act
+          </h1>
+        </div>
+        <ul class="subnav">
+          <li><a href="log/Act-class.html#constants">Constants</a></li>
+          <li><a href="log/Act-class.html#properties">Properties</a></li>
+        </ul>
+      </div> <!-- /col -->
+    </div> <!-- /row -->
+  </div> <!-- /container -->
+
+</header>
+
+<div class="container body">
+  <div class="row">
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">conlog</a></h5>
+    <h5><a href="log/log-library.html">log</a></h5>
+
+    <ol>
+    
+    
+    
+      <li class="section-title"><a href="log/log-library.html#functions">Functions</a></li>
+      <li><a href="log/scribe.html">scribe</a></li>
+    
+      <li class="section-title"><a href="log/log-library.html#enums">Enums</a></li>
+      <li><a href="log/Act-class.html">Act</a></li>
+      <li><a href="log/DirectObject-class.html">DirectObject</a></li>
+      <li><a href="log/Subject-class.html">Subject</a></li>
+    
+      <li class="section-title"><a href="log/log-library.html#classes">Classes</a></li>
+      <li><a href="log/LogIt-class.html">LogIt</a></li>
+    
+    </ol>
+  </div>
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+
+    <section class="desc markdown">
+      <p>Represents the verb, the action of what is happening, happened or about to happen. You will notice
+the matching pairs here. Using will result in group on the logs.
+Sometime it can hard to work out when to use started, call and request. The differentiators of all of
+comes down to two factors, returns and expected time.</p>
+<p>Making an Async call with the expectation of a return within the next few cycles of the executing loop is the
+near future. Making an Async call with the possibility of needing to make more calls any of which may not
+complete for a dozen cycles or more is a said to be starting something.</p>
+<p>Call is to void function of method, using Called to representing when control returns to the subject that made the call.</p>
+    </section>
+    
+
+    <section class="summary offset-anchor" id="constants">
+      <h2>Constants</h2>
+
+      <dl class="properties">
+        <dt id="Aggregate" class="constant">
+          <span class="name ">Aggregate</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(1)</code></span>
+          </div>
+        </dd>
+        <dt id="Aggregated" class="constant">
+          <span class="name ">Aggregated</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(2)</code></span>
+          </div>
+        </dd>
+        <dt id="Aggregating" class="constant">
+          <span class="name ">Aggregating</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(3)</code></span>
+          </div>
+        </dd>
+        <dt id="Call" class="constant">
+          <span class="name ">Call</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(4)</code></span>
+          </div>
+        </dd>
+        <dt id="Called" class="constant">
+          <span class="name ">Called</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(5)</code></span>
+          </div>
+        </dd>
+        <dt id="Canonicalise" class="constant">
+          <span class="name ">Canonicalise</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(6)</code></span>
+          </div>
+        </dd>
+        <dt id="Canonicalised" class="constant">
+          <span class="name ">Canonicalised</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(7)</code></span>
+          </div>
+        </dd>
+        <dt id="Canonicalising" class="constant">
+          <span class="name ">Canonicalising</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(8)</code></span>
+          </div>
+        </dd>
+        <dt id="Construct" class="constant">
+          <span class="name ">Construct</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(9)</code></span>
+          </div>
+        </dd>
+        <dt id="Constructed" class="constant">
+          <span class="name ">Constructed</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(10)</code></span>
+          </div>
+        </dd>
+        <dt id="Establish" class="constant">
+          <span class="name ">Establish</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(11)</code></span>
+          </div>
+        </dd>
+        <dt id="Established" class="constant">
+          <span class="name ">Established</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(12)</code></span>
+          </div>
+        </dd>
+        <dt id="Establishing" class="constant">
+          <span class="name ">Establishing</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(13)</code></span>
+          </div>
+        </dd>
+        <dt id="Finished" class="constant">
+          <span class="name ">Finished</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(14)</code></span>
+          </div>
+        </dd>
+        <dt id="Finishing" class="constant">
+          <span class="name ">Finishing</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(15)</code></span>
+          </div>
+        </dd>
+        <dt id="Fold" class="constant">
+          <span class="name ">Fold</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(16)</code></span>
+          </div>
+        </dd>
+        <dt id="Folded" class="constant">
+          <span class="name ">Folded</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(17)</code></span>
+          </div>
+        </dd>
+        <dt id="Heard" class="constant">
+          <span class="name ">Heard</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(18)</code></span>
+          </div>
+        </dd>
+        <dt id="Listen" class="constant">
+          <span class="name ">Listen</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(19)</code></span>
+          </div>
+        </dd>
+        <dt id="Map" class="constant">
+          <span class="name ">Map</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(20)</code></span>
+          </div>
+        </dd>
+        <dt id="Mapped" class="constant">
+          <span class="name ">Mapped</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(21)</code></span>
+          </div>
+        </dd>
+        <dt id="Match" class="constant">
+          <span class="name ">Match</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(22)</code></span>
+          </div>
+        </dd>
+        <dt id="Matched" class="constant">
+          <span class="name ">Matched</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(23)</code></span>
+          </div>
+        </dd>
+        <dt id="Partition" class="constant">
+          <span class="name ">Partition</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(24)</code></span>
+          </div>
+        </dd>
+        <dt id="Partitioned" class="constant">
+          <span class="name ">Partitioned</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(25)</code></span>
+          </div>
+        </dd>
+        <dt id="Received" class="constant">
+          <span class="name ">Received</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(26)</code></span>
+          </div>
+        </dd>
+        <dt id="Reduced" class="constant">
+          <span class="name ">Reduced</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(27)</code></span>
+          </div>
+        </dd>
+        <dt id="Reduction" class="constant">
+          <span class="name ">Reduction</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(28)</code></span>
+          </div>
+        </dd>
+        <dt id="Request" class="constant">
+          <span class="name ">Request</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(29)</code></span>
+          </div>
+        </dd>
+        <dt id="Requesting" class="constant">
+          <span class="name ">Requesting</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(30)</code></span>
+          </div>
+        </dd>
+        <dt id="Retired" class="constant">
+          <span class="name ">Retired</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(31)</code></span>
+          </div>
+        </dd>
+        <dt id="Retry" class="constant">
+          <span class="name ">Retry</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(32)</code></span>
+          </div>
+        </dd>
+        <dt id="Retrying" class="constant">
+          <span class="name ">Retrying</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(33)</code></span>
+          </div>
+        </dd>
+        <dt id="Started" class="constant">
+          <span class="name ">Started</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(34)</code></span>
+          </div>
+        </dd>
+        <dt id="Starting" class="constant">
+          <span class="name ">Starting</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(35)</code></span>
+          </div>
+        </dd>
+        <dt id="StateChanged" class="constant">
+          <span class="name ">StateChanged</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(36)</code></span>
+          </div>
+        </dd>
+        <dt id="Validate" class="constant">
+          <span class="name ">Validate</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(37)</code></span>
+          </div>
+        </dd>
+        <dt id="Validated" class="constant">
+          <span class="name ">Validated</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(38)</code></span>
+          </div>
+        </dd>
+        <dt id="Validating" class="constant">
+          <span class="name ">Validating</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(39)</code></span>
+          </div>
+        </dd>
+        <dt id="values" class="constant">
+          <span class="name ">values</span>
+          <span class="signature">&#8594; List&lt;<a href="log/Act-class.html">Act</a>&gt;</span>
+        </dt>
+        <dd>
+          <p>A constant List of the values in this enum, in order of their declaration.</p>
+          <div>
+            <span class="signature"><code>const List&lt;Act&gt;</code></span>
+          </div>
+        </dd>
+        <dt id="Verified" class="constant">
+          <span class="name ">Verified</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(40)</code></span>
+          </div>
+        </dd>
+        <dt id="Verify" class="constant">
+          <span class="name ">Verify</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(41)</code></span>
+          </div>
+        </dd>
+        <dt id="Verifying" class="constant">
+          <span class="name ">Verifying</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(42)</code></span>
+          </div>
+        </dd>
+        <dt id="Zip" class="constant">
+          <span class="name ">Zip</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(43)</code></span>
+          </div>
+        </dd>
+        <dt id="Zipped" class="constant">
+          <span class="name ">Zipped</span>
+          <span class="signature">&#8594; <a href="log/Act-class.html">Act</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="signature"><code>const Act(44)</code></span>
+          </div>
+        </dd>
+      </dl>
+    </section>
+
+
+
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="hashCode" class="property inherited">
+          <span class="name"><a href="log/Act/hashCode.html">hashCode</a></span>
+          <span class="signature">&#8594; int</span>
+        </dt>
+        <dd class="inherited">
+          <p>Get a hash code for this object.<a href="log/Act/hashCode.html">&hellip;</a>
+</p>
+          <div class="features">
+    read-only, inherited
+  </div>
+</dd>
+        <dt id="index" class="property">
+          <span class="name">index</span>
+          <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="features">
+    read-only
+  </div>
+</dd>
+        <dt id="runtimeType" class="property inherited">
+          <span class="name"><a href="log/Act/runtimeType.html">runtimeType</a></span>
+          <span class="signature">&#8594; Type</span>
+        </dt>
+        <dd class="inherited">
+          <p>A representation of the runtime type of the object.</p>
+          <div class="features">
+    read-only, inherited
+  </div>
+</dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor inherited" id="operators">
+      <h2>Operators</h2>
+      <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+          <span class="name"><a href="log/Act/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="parameter-name">other</span></span>)
+            <span class="returntype parameter">&#8594; bool</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p>The equality operator.<a href="log/Act/operator_equals.html">&hellip;</a>
+</p>
+          <div class="features">inherited</div>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor inherited" id="instance-methods">
+      <h2>Methods</h2>
+      <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+          <span class="name"><a href="log/Act/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p>Invoked when a non-existent method or property is accessed.<a href="log/Act/noSuchMethod.html">&hellip;</a>
+</p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="toString" class="callable inherited">
+          <span class="name"><a href="log/Act/toString.html">toString</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; String</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p>Returns a string representation of this object.</p>
+          <div class="features">inherited</div>
+        </dd>
+      </dl>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <h5>Act</h5>
+    <ol>
+      <li class="section-title"><a href="log/Act-class.html#constants">Constants</a></li>
+      <li>Aggregate</li>
+      <li>Aggregated</li>
+      <li>Aggregating</li>
+      <li>Call</li>
+      <li>Called</li>
+      <li>Canonicalise</li>
+      <li>Canonicalised</li>
+      <li>Canonicalising</li>
+      <li>Construct</li>
+      <li>Constructed</li>
+      <li>Establish</li>
+      <li>Established</li>
+      <li>Establishing</li>
+      <li>Finished</li>
+      <li>Finishing</li>
+      <li>Fold</li>
+      <li>Folded</li>
+      <li>Heard</li>
+      <li>Listen</li>
+      <li>Map</li>
+      <li>Mapped</li>
+      <li>Match</li>
+      <li>Matched</li>
+      <li>Partition</li>
+      <li>Partitioned</li>
+      <li>Received</li>
+      <li>Reduced</li>
+      <li>Reduction</li>
+      <li>Request</li>
+      <li>Requesting</li>
+      <li>Retired</li>
+      <li>Retry</li>
+      <li>Retrying</li>
+      <li>Started</li>
+      <li>Starting</li>
+      <li>StateChanged</li>
+      <li>Validate</li>
+      <li>Validated</li>
+      <li>Validating</li>
+      <li>values</li>
+      <li>Verified</li>
+      <li>Verify</li>
+      <li>Verifying</li>
+      <li>Zip</li>
+      <li>Zipped</li>
+    
+    
+    
+    
+      <li class="section-title">
+        <a href="log/Act-class.html#instance-properties">Properties</a>
+      </li>
+      <li class="inherited"><a href="log/Act/hashCode.html">hashCode</a></li>
+      <li>index</li>
+      <li class="inherited"><a href="log/Act/runtimeType.html">runtimeType</a></li>
+    
+      <li class="section-title inherited"><a href="log/Act-class.html#operators">Operators</a></li>
+      <li class="inherited"><a href="log/Act/operator_equals.html">operator ==</a></li>
+    
+      <li class="section-title inherited"><a href="log/Act-class.html#instance-methods">Methods</a></li>
+      <li class="inherited"><a href="log/Act/noSuchMethod.html">noSuchMethod</a></li>
+      <li class="inherited"><a href="log/Act/toString.html">toString</a></li>
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+</div> <!-- row -->
+</div> <!-- container -->
+
+<footer>
+  <div class="container-fluid">
+    <div class="container">
+      <p class="text-center">
+        <span class="no-break">
+          conlog 0.0.1
+        </span>
+        &bull;
+        <span class="no-break">
+          <a href="https://www.dartlang.org">
+            <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
+          </a>
+        </span>
+        &bull;
+        <span class="copyright no-break">
+          <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+        </span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+
+</body>
+
+</html>

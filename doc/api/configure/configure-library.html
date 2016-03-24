@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="configure library API docs, for the Dart programming language.">
+  <title>configure library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="..">
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' type='text/css'>
+  <link rel="stylesheet" href="static-assets/prettify.css">
+  <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+
+  <!-- Do not remove placeholder -->
+  <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+  <nav class="navbar navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+          <ol class="breadcrumbs gt-separated hidden-xs">
+            <li><a href="index.html">conlog</a></li>
+            <li class="self-crumb">configure</li>
+          </ol>
+          <div class="self-name">configure</div>
+          <form class="search navbar-right" role="search">
+            <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+          </form>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+  </nav>
+
+  <div class="container masthead">
+    <div class="row">
+      <div class="col-sm-12 contents">
+        <ol class="breadcrumbs gt-separated visible-xs">
+          <li><a href="index.html">conlog</a></li>
+          <li class="self-crumb">configure</li>
+        </ol>
+        <div class="title-description">
+          <h1 class="title">
+            <span class="kind">library</span> configure
+          </h1>
+        </div>
+        <ul class="subnav">
+          <li><a href="configure/configure-library.html#functions">Functions</a></li>
+          <li><a href="configure/configure-library.html#enums">Enums</a></li>
+          <li><a href="configure/configure-library.html#classes">Classes</a></li>
+        </ul>
+      </div> <!-- /col -->
+    </div> <!-- /row -->
+  </div> <!-- /container -->
+
+</header>
+
+<div class="container body">
+  <div class="row">
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">conlog</a></h5>
+
+    <ol>
+      <li class="section-title"><a href="index.html">Libraries</a></li>
+      <li><a href="configure/configure-library.html">configure</a></li>
+      <li><a href="log/log-library.html">log</a></li>
+    </ol>
+  </div>
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+
+    <section class="desc markdown">
+      <h3>Configuration Library</h3>
+<p>So simple, check out the examples.</p>
+<p>The deal is that you create a configuration library, importing <code>configure.dart</code>
+from the conlog package. Then create two Enums The first with labels for your
+configuration sets. The second holds the configuration attribute names.</p>
+<p>You can go about creating as many configuration sets as you like using the
+LookupMap exposed in the API.</p>
+<p>Then in the one closure function you need to create use thee<code>register()</code> function,
+to start your wiring. This is how you linkup your configuration sets to your
+labels and to runtime modes.</p>
+<p>The API also has a <code>configSets()</code> function that returns a LookupMap for
+configuration set label (enum.index) this all takes the runtimeMode (enum.index).
+Include this in your closure.</p>
+<p>So when your closure is call the first time it does all the wiring with
+that you defined with<code>register()</code>, before all tree shaking has already eliminated
+the sets are not going to use. Then you return in your
+closure function the lookupMap returned from  <code>configSet()</code> which
+you use to back a simple lockup function which returns a value given then ConfigValue
+enum name.</p>
+<p>The working examples should how this works and hopefully it will avoid all those
+hate items. It simple and It works.</p>
+    </section>
+    
+
+
+
+    <section class="summary offset-anchor" id="functions">
+      <h2>Functions</h2>
+
+      <dl class="callables">
+        <dt id="configSets" class="callable">
+          <span class="name"><a href="configure/configSets.html">configSets</a></span><span class="signature">(<wbr><span class="parameter" id="configSets-param-registrationIdx"><span class="type-annotation">int</span> <span class="parameter-name">registrationIdx</span></span>, <span class="parameter" id="configSets-param-runtimeModeIdx"><span class="type-annotation">int</span> <span class="parameter-name">runtimeModeIdx</span></span>)
+            <span class="returntype parameter">&#8594; <a href="configure/LookupMap-class.html">LookupMap</a></span>
+          </span>
+        </dt>
+        <dd>
+          <p>Returns a lookup map with the configuration values for configuration and
+the runtime. If one can not be located, the fallback is used. Should that
+not of been set then last configuration to be registered is used.</p>
+        </dd>
+        <dt id="register" class="callable">
+          <span class="name"><a href="configure/register.html">register</a></span><span class="signature">(<wbr><span class="parameter" id="register-param-payloadName"><span class="parameter-name">payloadName</span></span>, <span class="parameter" id="register-param-configurationPayload"><span class="type-annotation"><a href="configure/LookupMap-class.html">LookupMap</a></span> <span class="parameter-name">configurationPayload</span></span>, <span class="parameter" id="register-param-runtime"><span class="type-annotation"><a href="configure/RuntimeMode-class.html">RuntimeMode</a></span> <span class="parameter-name">runtime</span></span>, {<span class="parameter" id="register-param-fallback"><span class="type-annotation">bool</span> <span class="parameter-name">fallback</span>: <span class="default-value">false</span></span>})
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p>Builds up the registrations of the of configurations set that you would like
+to have available. By using the optional fallback parameter to a determine
+which configuration is used if one is asked for in a runtime context that
+does not exist..</p>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="enums">
+      <h2>Enums</h2>
+
+      <dl>
+        <dt id="RuntimeMode">
+          <a href="configure/RuntimeMode-class.html">RuntimeMode</a>
+        </dt>
+        <dd>
+          <p>Denotes the three simple context for which an application can be executing in.
+Used also to control logging levels.<a href="configure/RuntimeMode-class.html">&hellip;</a>
+</p>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="classes">
+      <h2>Classes</h2>
+
+      <dl>
+        <dt id="LookupMap">
+          <span class="name "><a href="configure/LookupMap-class.html">LookupMap</a></span>
+        </dt>
+        <dd>
+          <p><a href="configure/LookupMap-class.html">LookupMap</a> is a simple, but very restricted map.  The map can only hold
+constant keys and the only way to use the map is to retrieve values with a
+key you already have.  Expect for lookup, any other operation in <code>Map</code> (like
+forEach, keys, values, length, etc) is not available.<a href="configure/LookupMap-class.html">&hellip;</a>
+</p>
+        </dd>
+      </dl>
+    </section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <h5>configure</h5>
+    <ol>
+    
+    
+    
+      <li class="section-title"><a href="configure/configure-library.html#functions">Functions</a></li>
+      <li><a href="configure/configSets.html">configSets</a></li>
+      <li><a href="configure/register.html">register</a></li>
+    
+      <li class="section-title"><a href="configure/configure-library.html#enums">Enums</a></li>
+      <li><a href="configure/RuntimeMode-class.html">RuntimeMode</a></li>
+    
+      <li class="section-title"><a href="configure/configure-library.html#classes">Classes</a></li>
+      <li><a href="configure/LookupMap-class.html">LookupMap</a></li>
+    
+    </ol>
+  </div><!--/sidebar-offcanvas-right-->
+
+</div> <!-- row -->
+</div> <!-- container -->
+
+<footer>
+  <div class="container-fluid">
+    <div class="container">
+      <p class="text-center">
+        <span class="no-break">
+          conlog 0.0.1
+        </span>
+        &bull;
+        <span class="no-break">
+          <a href="https://www.dartlang.org">
+            <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
+          </a>
+        </span>
+        &bull;
+        <span class="copyright no-break">
+          <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+        </span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+
+</body>
+
+</html>
