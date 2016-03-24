@@ -4,7 +4,7 @@ For the control freak in all of us. It is just simple logging and configuration 
 
 ### Opinionated
 
-I say simple but it really opinionated, so it is not for everyone, you have my permission to hate it.
+I say simple but it is really opinionated, so it is not for everyone, you have my permission to hate it.
 
 #### Logging
 
